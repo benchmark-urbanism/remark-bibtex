@@ -1,6 +1,6 @@
 const remark = require('remark')
 
-// const remarkBibtex = require('remark-bibtex')
+// const remarkBibtex = require('@benchmark-urbanism/remark-bibtex')
 const remarkBibtex = require('../index.js')
 const bibtexFilePath = './example/example.bib'
 

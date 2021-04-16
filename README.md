@@ -28,14 +28,14 @@ Wasserman, S., & Faust, K. (1994). Social Network Analysis. Cambridge University
 ## Install
 
 ```sh
-yarn add remark-bibtex
+yarn add @benchmark-urbanism/remark-bibtex
 ```
 
 ## Usage
 
 ```js
 const remark = require('remark')
-const remarkBibtex = require('remark-bibtex')
+const remarkBibtex = require('@benchmark-urbanism/remark-bibtex')
 
 const bibtexFilePath = './example/example.bib'
 
@@ -62,7 +62,7 @@ And with options:
 
 ```js
 const remark = require('remark')
-const remarkBibtex = require('remark-bibtex')
+const remarkBibtex = require('@benchmark-urbanism/remark-bibtex')
 
 const bibtexFilePath = './example/example.bib'
 
