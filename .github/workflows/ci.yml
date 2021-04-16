@@ -15,6 +15,7 @@ jobs:
           # Defaults to the user or organization that owns the workflow file
           scope: '@benchmark-urbanism'
       - run: yarn
+      - run: yarn test
       - run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
