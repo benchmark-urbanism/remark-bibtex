@@ -1,6 +1,6 @@
 {
   "name": "@benchmark-urbanism/remark-bibtex",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Remark plugin to generate citations from a bibtex file",
   "homepage": "https://github.com/benchmark-urbanism/remark-bibtex#readme",
   "main": "index.js",
@@ -19,6 +19,7 @@
     "mdast-bibtex",
     "remark-plugin",
     "remark-bibtex",
+    "remark-footnote",
     "citation-js",
     "CSL"
   ],
@@ -34,8 +35,7 @@
   },
   "dependencies": {
     "citation-js": "^0.5.0",
-    "mdast-util-find-and-replace": "^1.1.1",
-    "mdast-util-from-markdown": "^0.8.5"
+    "unist-util-visit": "^2.0.3"
   },
   "devDependencies": {
     "eslint": "^7.24.0",
@@ -43,6 +43,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
-    "remark": "^13.0.0"
+    "remark": "^13.0.0",
+    "remark-footnotes": "^3.0.0"
   }
 }

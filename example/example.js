@@ -1,25 +1,21 @@
 const remark = require('remark')
+const footnotes = require('remark-footnotes')
 
 // const remarkBibtex = require('@benchmark-urbanism/remark-bibtex')
 const remarkBibtex = require('../index.js')
 const bibtexFilePath = './example/example.bib'
 
 remark()
+  .use(footnotes)
   .use(remarkBibtex, { bibtexFile: bibtexFilePath })
-  .process('Ref A: (@Wasserman1994) Ref B: (@Harris2020)')
+  .process('# My Document\n\nSo here is my citation (@Wasserman1994). End of story.')
   .then((content) => content.toString())
   .then((markdown) => console.log(markdown))
   .catch((err) => console.error(err))
 
 remark()
-  .use(remarkBibtex, {
-    bibtexFile: bibtexFilePath,
-    citeHeadingText: '## Bibliography',
-    citeJsOptions: {
-      format: 'html',
-      template: 'vancouver',
-    },
-  })
+  .use(footnotes)
+  .use(remarkBibtex, { bibtexFile: bibtexFilePath })
   .process('Ref A: (@Harris2020) Ref B: (@Wasserman1994)')
   .then((content) => content.toString())
   .then((markdown) => console.log(markdown))
