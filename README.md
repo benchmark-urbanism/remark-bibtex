@@ -1,8 +1,10 @@
 # remark-bibtex
 
-Remark-bibtex is a [remark](https://github.com/wooorm/remark) plugin to generate footnoted citations from a `bibtex` file. It uses [`citation-js`](https://github.com/citation-js/citation-js) to load the provided `.bib` file, from which it will fetch citations contained in the markdown text. Citation keys should take the form of `(@my-citation)`: The citation key will be replaced with a numbered footnote reference, and a bibliography entry will be added to the markdown document's footnotes section.
+Remark-bibtex is a [remark](https://github.com/wooorm/remark) plugin to generate footnoted citations from a `bibtex` file. It uses [`citation-js`](https://github.com/citation-js/citation-js) to load a specified `.bib` file, from which citations will be retrieved and added to the markdown file's footnotes section.
 
-In order to work, this package has to be chained to the [`remark-footnotes`](https://github.com/remarkjs/remark-footnotes) package, which adds the necessary footnoting capability.
+Citation keys take the form of `(@my-citation)`: The citation key will be replaced with a numbered footnote reference corresponding to the bibliography entry added to the markdown document's footnotes section.
+
+In order to work, this package has to be chained to the [`remark-footnotes`](https://github.com/remarkjs/remark-footnotes) package, which adds the necessary markdown footnoting capability.
 
 ```md
 # My Document
