@@ -58,14 +58,14 @@ function plugin(pluginOptions) {
       if (citeEndIdx < node.value.length) {
         newChildren.push({
           type: 'text',
-          value: node.value.slice(citeEndIdx, node.value.length),
+          value: node.value.slice(citeEndIdx),
         })
       }
       // insert into the parent
       parent.children = [
         ...parent.children.slice(0, idx),
         ...newChildren,
-        ...parent.children.slice(idx + 1, parent.children.length - 1),
+        ...parent.children.slice(idx + 1),
       ]
     })
     // add the footnotes
