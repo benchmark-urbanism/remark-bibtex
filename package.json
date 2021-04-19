@@ -6,7 +6,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benchmark-urbanism/remark-bibtex.git"
+    "url": "https://github.com/benchmark-urbanism/remark-bibtex.git"
   },
   "author": "benchmark-urbanism",
   "license": "MIT",
