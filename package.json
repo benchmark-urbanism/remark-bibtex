@@ -3,7 +3,6 @@
   "version": "0.3.0",
   "description": "Remark plugin to generate citations from a bibtex file",
   "homepage": "https://github.com/benchmark-urbanism/remark-bibtex#readme",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/benchmark-urbanism/remark-bibtex.git"
@@ -29,6 +28,7 @@
   "files": [
     "index.js"
   ],
+  "main": "index.js",
   "scripts": {
     "test": "jest test.js",
     "example": "node ./example/example.js"
