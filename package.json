@@ -1,14 +1,14 @@
 {
   "name": "@benchmark-urbanism/remark-bibtex",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Remark plugin to generate citations from a bibtex file",
   "homepage": "https://github.com/benchmark-urbanism/remark-bibtex#readme",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/benchmark-urbanism/remark-bibtex.git"
   },
   "author": "benchmark-urbanism",
-  "license": "MIT",
   "keywords": [
     "mdast",
     "remark",
@@ -30,22 +30,25 @@
     "package.json",
     "LICENSE"
   ],
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "jest test.js",
+    "test": "tape test.js",
     "example": "node ./example/example.js"
   },
   "dependencies": {
-    "citation-js": "^0.5.0",
-    "unist-util-visit": "^2.0.3"
+    "@citation-js/core": "^0.5.1",
+    "@citation-js/plugin-bibtex": "^0.5.1",
+    "@citation-js/plugin-csl": "^0.5.1",
+    "unist-util-visit": "^4.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.24.0",
-    "eslint-config-prettier": "^8.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "jest": "^26.6.3",
-    "prettier": "^2.2.1",
-    "remark": "^13.0.0",
-    "remark-footnotes": "^3.0.0"
+    "prettier": "^2.3.2",
+    "remark": "^14.0.1",
+    "remark-footnotes": "^4.0.0",
+    "tape": "^5.3.1"
   }
 }

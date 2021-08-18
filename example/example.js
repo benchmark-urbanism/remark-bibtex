@@ -1,8 +1,7 @@
-const remark = require('remark')
-const footnotes = require('remark-footnotes')
+import footnotes from 'remark-footnotes'
+import { remark } from 'remark'
+import remarkBibtex from '../index.js'
 
-// const remarkBibtex = require('@benchmark-urbanism/remark-bibtex')
-const remarkBibtex = require('../index.js')
 const bibtexFilePath = './example/example.bib'
 
 remark()

@@ -29,9 +29,9 @@ yarn add remark-footnotes @benchmark-urbanism/remark-bibtex
 ## Usage
 
 ```js
-const remark = require('remark')
-const footnotes = require('remark-footnotes')
-const remarkBibtex = require('@benchmark-urbanism/remark-bibtex')
+import footnotes from 'remark-footnotes'
+import { remark } from 'remark'
+import remarkBibtex from '@benchmark-urbanism/remark-bibtex'
 
 const bibtexFilePath = './example/example.bib'
 

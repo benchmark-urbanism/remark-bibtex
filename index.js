@@ -1,9 +1,10 @@
-const citejs = require('citation-js')
-const fs = require('fs')
-const visit = require('unist-util-visit')
-module.exports = plugin
+import * as fs from 'fs'
+import { Cite } from '@citation-js/core'
+import '@citation-js/plugin-bibtex'
+import '@citation-js/plugin-csl'
+import { visit } from 'unist-util-visit'
 
-function plugin(pluginOptions) {
+export default function remarkBibtex(pluginOptions) {
   // the bibtex filepath is mandatory
   if (!('bibtexFile' in pluginOptions))
     throw new Error(
@@ -16,7 +17,7 @@ function plugin(pluginOptions) {
     // read-in bibtex
     const bibtexFile = await fs.promises.readFile(pluginOptions.bibtexFile, 'utf8')
     // this is the citation-js instance
-    const citations = new citejs(bibtexFile)
+    const citations = new Cite(bibtexFile)
     // keep track of unique references
     const uniqueCiteRefs = []
     // visit nodes to find and extract citations
