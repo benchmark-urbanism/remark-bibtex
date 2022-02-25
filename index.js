@@ -72,14 +72,12 @@ export default function remarkBibtex(pluginOptions) {
     // add the footnotes
     // generate the bib text
     // https://citation.js.org/api/0.3/tutorial-output_formats.html
-    const citedText = citations
-      .format('bibliography', {
+    uniqueCiteRefs.forEach((citeRef, idx) => {
+      const cited = citations.format('bibliography', {
         format: 'text',
         template: 'vancouver',
-        entry: uniqueCiteRefs,
+        entry: citeRef,
       })
-      .split('\n')
-    uniqueCiteRefs.forEach((citeRef, idx) => {
       // add to footnotes
       markdownAST.children.push({
         type: 'footnoteDefinition',
@@ -91,7 +89,7 @@ export default function remarkBibtex(pluginOptions) {
             children: [
               {
                 type: 'text',
-                value: citedText[idx],
+                value: cited,
               },
             ],
           },
