@@ -1,6 +1,6 @@
 {
   "name": "@benchmark-urbanism/remark-bibtex",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Remark plugin to generate citations from a bibtex file",
   "homepage": "https://github.com/benchmark-urbanism/remark-bibtex#readme",
   "license": "MIT",
