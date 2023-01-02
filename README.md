@@ -1,3 +1,5 @@
+> Please note that this package is deprecated. Please consider using [rehype-citation](https://github.com/timlrx/rehype-citation) instead.
+
 # remark-bibtex
 
 Remark-bibtex is a [remark](https://github.com/wooorm/remark) plugin to generate footnoted citations from a `bibtex` file. It uses [`citation-js`](https://github.com/citation-js/citation-js) to load a specified `.bib` file from which citations will be retrieved and added to the markdown file's footnotes section.
